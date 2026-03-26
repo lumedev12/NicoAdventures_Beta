@@ -1,0 +1,12 @@
+{
+  "routes": [
+    {
+      "src": "/",
+      "dest": "/fases/Fase_beta/index.html"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/fases/Fase_beta/$1"
+    }
+  ]
+}
