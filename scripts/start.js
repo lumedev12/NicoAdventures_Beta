@@ -1,3 +1,3 @@
 function startGame() {
-  window.location.href = "video.html";
+  window.location.href = "pages/video.html";
 }
