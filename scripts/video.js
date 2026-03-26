@@ -9,5 +9,5 @@ video.onended = function(){
 };
 
 function next(){
-    window.location.href = "Beta/index.html";
+    window.location.href = "/fases/Fase_beta/ratinho_beta";
 }
