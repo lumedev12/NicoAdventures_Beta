@@ -1,7 +1,5 @@
 {
   "routes": [
-    { "handle": "filesystem" },
-    { "src": "/ratinho_beta/(.*)", "handle": "filesystem" },
-    { "src": "/(.*)", "dest": "/index.html" }
+    { "handle": "filesystem" }
   ]
 }
