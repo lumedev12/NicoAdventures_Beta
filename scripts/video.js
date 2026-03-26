@@ -19,3 +19,7 @@ function skipVideo(){
 function next(){
     window.location.href = "/ratinho_beta/"
 }
+
+function backToMenu(){
+    window.location.href = "/"
+}
