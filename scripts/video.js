@@ -17,5 +17,9 @@ function skipVideo(){
 }
 
 function next(){
-    window.location.href = "/ratinho_beta/"
+    window.location.href = "/boss_final/"
+}
+
+function backToMenu(){
+    window.location.href = "/"
 }
