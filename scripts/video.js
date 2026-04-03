@@ -17,7 +17,7 @@ function skipVideo(){
 }
 
 function next(){
-    window.location.href = "/boss_final/"
+    window.location.href = "/sotam/"
 }
 
 function backToMenu(){
