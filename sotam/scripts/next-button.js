@@ -39,7 +39,7 @@ function createNextPhaseButton() {
         button.style.transform = "translateY(0)";
     });
     button.addEventListener("click", () => {
-        window.location.href = "/boss_final/";
+        window.location.href = "/pages/desenvolvimento-corredor.html";
     });
 
     container.appendChild(button);

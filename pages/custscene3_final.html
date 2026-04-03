@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Video</title>
+  
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+  <link rel="stylesheet" href="/styles/video.css">
+</head>
+<body>
+  <!-- Overlay para contraste -->
+  <div class="overlay"></div>
+
+  <!-- Botão voltar -->
+  <button id="backBtn" class="back-btn" onclick="backToMenu()">← Menu</button>
+
+  <!-- Container principal -->
+  <div class="video-container animate__animated animate__fadeIn">
+    <h1 class="video-title animate__animated animate__pulse animate__infinite">Introdução</h1>
+
+    <div class="video-frame animate__animated animate__zoomIn">
+      <video id="introVideo" autoplay muted>
+        <source src="/assets/videos/cutscene3_final.mp4" type="video/mp4">
+        Seu navegador não suporta vídeo.
+      </video>
+    </div>
+
+    <div class="btn-container">
+      <button id="skipBtn" class="animate__animated animate__fadeInUp" onclick="skipVideo()">Pular</button>
+      <button id="nextBtn" class="animate__animated animate__fadeInUp" onclick="next()">Next</button>
+    </div>
+  </div>
+
+  <script src="/scripts/video.js"></script>
+</body>
+</html>

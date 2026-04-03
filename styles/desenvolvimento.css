@@ -1,0 +1,154 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100dvh; 
+  width: 100%;
+  background: radial-gradient(circle at center, #0a0015 0%, #1a0033 100%);
+  font-family: 'Press Start 2P', cursive;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* OVERLAY */
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(10, 0, 30, 0.6);
+  z-index: 1;
+}
+
+/* BOTÃO VOLTAR (igual ao seu) */
+.back-btn {
+  position: fixed;
+  top: clamp(10px, 3vw, 20px);
+  right: clamp(10px, 3vw, 20px);
+  z-index: 10;
+  font-size: clamp(0.7rem, 2.5vw, 1rem);
+  padding: clamp(8px, 2vw, 12px) clamp(12px, 3vw, 20px);
+  border: 2px solid #FFD700;
+  border-radius: 8px;
+  background: rgba(255, 140, 0, 0.8);
+  color: #fff;
+  font-family: 'Press Start 2P', cursive;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-shadow: 1px 1px 3px #000;
+}
+
+.back-btn:hover {
+  background: #FFD700;
+  color: #000;
+  transform: scale(1.1);
+  box-shadow: 0 0 15px #FFD700;
+}
+
+/* 🔥 CONTAINER (MESMO PADRÃO DO VIDEO-CONTAINER) */
+.dev-container {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  color: #FFD700;
+  text-shadow: 2px 2px 8px #000;
+
+  padding: clamp(15px, 3vw, 25px);
+  width: 90vw;
+  max-width: 1000px;
+
+  background: rgba(0, 0, 0, 0.6);
+  border: 3px solid #FFD700;
+  border-radius: 15px;
+  box-shadow: 0 0 30px #FF8C00;
+}
+
+/* TÍTULO */
+.dev-title {
+  font-size: clamp(1.2rem, 3vw, 2rem);
+  margin-bottom: clamp(10px, 2vw, 20px);
+}
+
+/* TEXTOS */
+.dev-text {
+  font-size: clamp(0.7rem, 2vw, 1rem);
+  margin-bottom: 15px;
+}
+
+.dev-subtext {
+  font-size: clamp(0.6rem, 1.8vw, 0.9rem);
+  margin-bottom: 25px;
+  color: #fff;
+}
+
+/* 🔥 BARRA DE LOADING (PADRÃO LARANJA + DOURADO) */
+.loading-bar {
+  width: 100%;
+  height: 18px;
+  background: #111;
+  border: 2px solid #FFD700;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 25px;
+  box-shadow: 0 0 10px #FF8C00 inset;
+}
+
+.loading-fill {
+  height: 100%;
+  width: 30%;
+  background: linear-gradient(90deg, #FF8C00, #FFD700);
+  animation: loading 2s infinite alternate;
+}
+
+/* ANIMAÇÃO */
+@keyframes loading {
+  0% {
+    width: 10%;
+  }
+  100% {
+    width: 90%;
+  }
+}
+
+/* 🔥 BOTÃO PADRÃO DO SEU PROJETO */
+.dev-btn {
+  font-size: clamp(0.8rem, 2.5vw, 1.2rem);
+  padding: clamp(10px, 2vw, 15px) clamp(20px, 5vw, 40px);
+
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+
+  background: linear-gradient(135deg, #FF8C00, #FF4500);
+  color: #fff;
+
+  text-shadow: 1px 1px 4px #000;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.dev-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 25px #FFD700;
+  background: linear-gradient(135deg, #FFD700, #FF8C00);
+}
+
+/* RESPONSIVO */
+@media (max-width: 768px) {
+  .dev-container {
+    width: 95vw;
+  }
+}
+
+@media (max-width: 480px) {
+  .dev-title {
+    line-height: 1.4;
+  }
+
+  .dev-btn {
+    width: 100%;
+  }
+}
