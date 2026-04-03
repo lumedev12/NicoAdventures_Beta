@@ -20,6 +20,10 @@ function next(){
     window.location.href = "/sotam/"
 }
 
+function nextpreboss(){
+    window.location.href = "/boss_final/"
+}
+
 function backToMenu(){
     window.location.href = "/"
 }
