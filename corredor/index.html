@@ -54,11 +54,13 @@ window.addEventListener('load', function() {
 });
 
 // Detectar tecla X para ir para sotam
-document.addEventListener('keydown', function(event) {
+window.addEventListener('keydown', function(event) {
+    console.log('Key pressed:', event.key);
     if (event.key === 'x' || event.key === 'X') {
+        console.log('Redirecting to sotam');
         window.location.href = '../sotam/index.html';
     }
-});
+}, {capture: true});
 </script>
 	
 	<noscript>
