@@ -32,6 +32,34 @@ if (location.protocol.substr(0, 4) === "file")
 	alert("Web exports won't work until you upload them. (When running on the file: protocol, browsers block many features from working for security reasons.)");
 }
 </script>
+
+<script>
+// Forçar tela cheia
+function enterFullscreen() {
+    const elem = document.documentElement;
+    if (elem.requestFullscreen) {
+        elem.requestFullscreen();
+    } else if (elem.mozRequestFullScreen) { // Firefox
+        elem.mozRequestFullScreen();
+    } else if (elem.webkitRequestFullscreen) { // Chrome, Safari, Opera
+        elem.webkitRequestFullscreen();
+    } else if (elem.msRequestFullscreen) { // IE/Edge
+        elem.msRequestFullscreen();
+    }
+}
+
+// Tentar entrar em fullscreen ao carregar
+window.addEventListener('load', function() {
+    setTimeout(enterFullscreen, 1000); // Delay para garantir que o jogo carregou
+});
+
+// Detectar tecla X para ir para sotam
+document.addEventListener('keydown', function(event) {
+    if (event.key === 'x' || event.key === 'X') {
+        window.location.href = '../sotam/index.html';
+    }
+});
+</script>
 	
 	<noscript>
 		<div id="notSupportedWrap">
