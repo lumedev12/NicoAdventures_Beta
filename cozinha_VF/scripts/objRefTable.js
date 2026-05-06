@@ -19,6 +19,7 @@ self.C3_GetObjectRefTable = function () {
 		C3.Plugins.Keyboard.Cnds.OnKey,
 		C3.Plugins.System.Cnds.CompareVar,
 		C3.Plugins.Sprite.Acts.SetVisible,
+		C3.Plugins.Sprite.Cnds.IsOverlapping,
 		C3.Plugins.System.Acts.GoToLayout
 	];
 };
@@ -37,6 +38,7 @@ self.C3_JsPropNameTable = [
 	{Texto: 0},
 	{Sólido: 0},
 	{Sprite2: 0},
+	{Texto2: 0},
 	{pegou_mapa: 0},
 	{pegou_arma: 0}
 ];
@@ -53,5 +55,6 @@ self.InstanceType = {
 	end: class extends self.ISpriteInstance {},
 	Sprite7: class extends self.ISpriteInstance {},
 	Texto: class extends self.ITextInstance {},
-	Sprite2: class extends self.ISpriteInstance {}
+	Sprite2: class extends self.ISpriteInstance {},
+	Texto2: class extends self.ITextInstance {}
 }
