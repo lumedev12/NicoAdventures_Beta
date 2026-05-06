@@ -6,17 +6,28 @@
   <title>Nico Adventure's</title>
   
   <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
-
   <link rel="stylesheet" href="styles/start.css">
 </head>
 <body>
+
   <div class="overlay"></div>
 
   <div class="menu-container">
     
     <h1 class="game-title">Nico Adventure's</h1>
 
-    <button class="start-btn" onclick="startGame()">Iniciar Jogo</button>
+    <button id="startBtn" class="start-btn" onclick="startGame()">
+      Iniciar Jogo
+    </button>
+
+    <!-- LOADING -->
+    <div id="loadingContainer" class="loading-container">
+      <p class="loading-text">Carregando...</p>
+      <div class="loading-bar">
+        <div id="loadingProgress" class="loading-progress"></div>
+      </div>
+    </div>
+
   </div>
 
   <script src="scripts/start.js"></script>
